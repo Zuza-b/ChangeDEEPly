@@ -20,7 +20,7 @@ st.markdown('''
     . Age
     . Gender
     . Education background
-    . Course enrolled
+    . Category of the course you are interested in
 
 - Some more features for predicting:
     . behaviour of user over time considering his various actions
@@ -66,19 +66,17 @@ st.write('please wait while we process your data and make predictions')
 #
 X = dict(
 
-birth=float(1997.0),
-action = 'load_video',
-timediff=float(0.0),
-category='hostory',
-gender='male',
-education='Doctorate')
+birth=float(1999.0),
+category='computer',
+gender='female',
+education='High')
 
 #X = [['1997.0','load_video',0.0,'history','male','Doctorate']]
 X = pd.DataFrame([X])
 st.write(X)
 ## model.load
 #PATH_TO_LOCAL_MODEL = 'model.joblib'
-model = joblib.load('KNN_BaseModel.joblib')
+model = joblib.load('KNN_shilpa_model_0.joblib')
 
 
 
@@ -86,4 +84,8 @@ model = joblib.load('KNN_BaseModel.joblib')
 ## predict on the model
 
 output = model.predict(X)
-st.write(f'there is a {output} probability of you completing the course')
+if output == 1:
+    out = 'dropout of'
+else:
+    out = 'complete'
+st.write(f'You are most probable to {out} the course')

@@ -1,11 +1,12 @@
 import pandas as pd
 import numpy as np
+import os
 
 
-
-def get_data(nrows=1000000):
+def get_data():
     """get data """
-    df = pd.read_csv('../raw_data/df_final.csv',nrows)
+    df = pd.read_csv('/home/shilpa/code/Zuza-b/ChangeDEEPly/raw_data/df_full_withtime.csv',nrows = 5000)
+
     return df
 
 
@@ -27,3 +28,5 @@ def clean_data(df):
 
 if __name__ == '__main__':
     df = get_data()
+    #df = clean_data(df)
+    print(df.head())
