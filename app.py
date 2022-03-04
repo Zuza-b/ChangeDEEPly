@@ -63,15 +63,27 @@ st.write('please wait while we process your data and make predictions')
 #gender=int(Gender),
 #category=category)
 
-#pd.DataFrame(X)
+#
+X = dict(
+
+birth=float(1997.0),
+action = 'load_video',
+timediff=float(0.0),
+category='hostory',
+gender='male',
+education='Doctorate')
+
+#X = [['1997.0','load_video',0.0,'history','male','Doctorate']]
+X = pd.DataFrame([X])
+st.write(X)
 ## model.load
 #PATH_TO_LOCAL_MODEL = 'model.joblib'
-#model = joblib.load(PATH_TO_LOCAL_MODEL)
+model = joblib.load('KNN_BaseModel.joblib')
 
 
 
 
 ## predict on the model
 
-#output = model.predict(X)
-st.write(f'there is a 80% probability of you completing the course')
+output = model.predict(X)
+st.write(f'there is a {output} probability of you completing the course')
