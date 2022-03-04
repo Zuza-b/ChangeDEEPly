@@ -64,6 +64,7 @@ st.write('please wait while we process your data and make predictions')
 #category=category)
 
 #pd.DataFrame(X)
+#X = ['1997.0','history','']
 ## model.load
 #PATH_TO_LOCAL_MODEL = 'model.joblib'
 #model = joblib.load(PATH_TO_LOCAL_MODEL)
