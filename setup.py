@@ -15,3 +15,9 @@ setup(name='ChangeDEEPly',
       include_package_data=True,
       scripts=['scripts/ChangeDEEPly-run'],
       zip_safe=False)
+
+
+echo 'python-dotenv' >> requirements.txt
+pip install -r requirements.txt
+touch .env                  
+echo '.env' >> .gitignore
