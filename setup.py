@@ -17,7 +17,8 @@ setup(name='ChangeDEEPly',
       zip_safe=False)
 
 
-echo 'python-dotenv' >> requirements.txt
-pip install -r requirements.txt
-touch .env                  
-echo '.env' >> .gitignore
+#echo 'python-dotenv' >> requirements.txt
+#pip install -r requirements.txt
+#touch .env
+#echo 'python-dotenv' >> requirements.txt
+#echo '.env' >> .gitignore

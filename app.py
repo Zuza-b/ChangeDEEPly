@@ -10,26 +10,26 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 #st.set_page_config(layout="wide")
 
 # This code is different for each deployed app.
-CURRENT_THEME = "blue"
-IS_DARK_THEME = True
-EXPANDER_TEXT = """
-    This is a custom theme. You can enable it by copying the following code
-    to `.streamlit/config.toml`:
-    ```python
-    [theme]
-    primaryColor = "#E694FF"
-    backgroundColor = "#00172B"
-    secondaryBackgroundColor = "#0083B8"
-    textColor = "#C6CDD4"
-    font = "sans-serif"
-    ```
-    """
+#CURRENT_THEME = "blue"
+#IS_DARK_THEME = True
+#EXPANDER_TEXT = """
+#    This is a custom theme. You can enable it by copying the following code
+#    to `.streamlit/config.toml`:
+#    ```python
+#    [theme]
+#    primaryColor = "#E694FF"
+#    backgroundColor = "#00172B"
+#    secondaryBackgroundColor = "#0083B8"
+#    textColor = "#C6CDD4"
+#    font = "sans-serif"
+#    ```
+#    """
 
 # Set border of current theme to red, otherwise black or white
-border_color = "red"
-border_color = "lightgrey" if IS_DARK_THEME else "black"
+#border_color = "red"
+#border_color = "lightgrey" if IS_DARK_THEME else "black"
 '''
-# MOOC Dropout Prediction
+MOOC Dropout Prediction
 '''
 MOOC_img = '/home/shilpa/code/Zuza-b/ChangeDEEPly/MOOC.jpg'
 st.image(MOOC_img, width=350)
@@ -82,7 +82,7 @@ def form_callback():
     st.dataframe(X)
 ## model.load
 #PATH_TO_LOCAL_MODEL = 'model.joblib'
-    model = joblib.load('KNN_shilpa_model_0.joblib')
+    model = joblib.load('KNN_David_model_0.joblib')
 
 ## predict on the model
 # predict only after the user enters all the details

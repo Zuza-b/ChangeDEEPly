@@ -5,8 +5,8 @@ import os
 
 def get_data():
     """get data """
-    df = pd.read_csv('/home/shilpa/code/Zuza-b/ChangeDEEPly/raw_data/df_full_withtime.csv',nrows = 5000)
-
+    df = pd.read_csv('../raw_data/df_full_withtime.csv',nrows = 5000) ### changing the path, so it is 'local-shilpa' as before :)
+    df = df[df['birth']<2010] # adding this, if it doesnt work, remove it -- David
     return df
 
 

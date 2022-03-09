@@ -1,10 +1,10 @@
 ### ALL IMPORTS ----- LATER ADDING AT THE BEGINNING ###
 
 # MACHINE LEARNING
-from sklearn.pipeline import Pipeline
+from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder, FunctionTransformer
 #from sklearn import set_config; set_config(display='diagram')
 from sklearn.pipeline import make_pipeline
 from sklearn.pipeline import make_union
@@ -14,6 +14,9 @@ from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 import pandas as pd
+
+# Zuzanna stuff
+from ChangeDEEPly.feature_encoding import *
 
 class Encoder():
     def __init__(self):
@@ -41,7 +44,7 @@ class Encoder():
 
         #print(X_train.head(3))
         #print(pd.DataFrame(X_train_transformed).head(3))
-        self.pipe = make_pipeline(preprocessor, KNeighborsClassifier())
+        self.pipe = make_pipeline(preprocessor, RandomForestClassifier())
 
         return self.pipe
 

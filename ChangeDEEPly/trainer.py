@@ -3,12 +3,15 @@ from ChangeDEEPly.encoders import Encoder #fit, transform, create_df_preprocesso
 import joblib
 import pandas as pd
 
+
+
+
 class Trainer(object):
     def __init__(self):
         pass
 
     def save_model(self,model):
-        filename = "KNN_shilpa_model_0.joblib"
+        filename = "../RF_Base_model_0.joblib"
         joblib.dump(model, filename)
 
 if __name__ == "__main__":
@@ -20,6 +23,8 @@ if __name__ == "__main__":
     X,y = encoder.create_df_preprocessor(df)
     pipe = encoder.transform(X,y)
     model = encoder.fit(X,y)
+
+
     #print(model)
     trainer = Trainer()
     trainer.save_model(model)
@@ -34,7 +39,7 @@ if __name__ == "__main__":
     category='history',
     gender='male',
     education='Doctorate')
-
+#
     #X = [['1997.0','load_video',0.0,'history','male','Doctorate']]
     X = pd.DataFrame([X])
     output = model.predict(X)
