@@ -3,8 +3,20 @@ import os
 import time
 from math import sqrt
 
-import joblib
 import pandas as pd
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+#from sklearn import set_config; set_config(display='diagram')
+from sklearn.pipeline import make_pipeline
+from sklearn.pipeline import make_union
+from sklearn.compose import make_column_transformer
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+import joblib
+
 
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 #st.set_page_config(layout="wide")
