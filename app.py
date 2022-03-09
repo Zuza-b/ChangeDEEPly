@@ -57,7 +57,7 @@ class App():
         st.subheader('Are you a Quitter or a Finisher')
 
 
-        with st.expander("Core Prediction"):
+        with st.expander('MODEL 1: Core Prediction'):
             st.write("""
                 Features considered:
 
@@ -73,7 +73,7 @@ class App():
             """)
             st.image("/home/shilpa/code/Zuza-b/ChangeDEEPly/KNN_img.png")
 
-        with st.expander("Behavioural Prediction"):
+        with st.expander("MODEL 2: Behavioural Prediction"):
             st.write("""
                 Features considered:
 
@@ -159,6 +159,15 @@ class App():
             submit_button = st.form_submit_button(label='Calculate!',
             on_click=self.form_callback, args=(Age, Gender, Education, category ))
 
+            file  = st.file_uploader("Upload file", type=['csv'])
+            if file is not None:
+            #st.write('hi')
+                file_details = {"FileName":file.name,"FileType":file.type,"FileSize":file.size}
+                st.write(file_details)
+                extension = file.name.split('.')[1]
+                if extension.upper() == 'CSV':
+                    df = pd.read_csv(file)
+                    st.write(df.head())
             #return Age, Gender, Education, category
 
     def form_callback(self, Age, Gender, Education, category):
