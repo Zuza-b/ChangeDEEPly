@@ -41,7 +41,7 @@ class Encoder():
 
         #print(X_train.head(3))
         #print(pd.DataFrame(X_train_transformed).head(3))
-        self.pipe = make_pipeline(preprocessor, KNeighborsClassifier())
+        self.pipe = make_pipeline(preprocessor, RandomForestClassifier())
 
         return self.pipe
 
