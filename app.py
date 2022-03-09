@@ -40,7 +40,7 @@ class App():
         # MOOC Dropout Prediction
         '''
         #st.title('MOOC Dropout Prediction')
-        MOOC_img = '/home/shilpa/code/Zuza-b/ChangeDEEPly/MOOC.jpg'
+        MOOC_img = 'MOOC.jpg'
         #st.image(MOOC_img, width=350)
 
         col1, col2 = st.columns([0.7,0.3])
@@ -71,7 +71,7 @@ class App():
 
                 Model: KNN with 5 neighbors
             """)
-            st.image("/home/shilpa/code/Zuza-b/ChangeDEEPly/KNN_img.png")
+            st.image("KNN_img.png")
 
         with st.expander("MODEL 2: Behavioural Prediction"):
             st.write("""
@@ -85,7 +85,7 @@ class App():
 
                 Model: Gradient Boosting Classifier
             """)
-            st.image("/home/shilpa/code/Zuza-b/ChangeDEEPly/GradientBoost.jpg")
+            st.image("GradientBoost.jpg")
 
 
 
