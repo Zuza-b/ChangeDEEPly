@@ -5,7 +5,7 @@ import os
 
 def get_data():
     """get data """
-    df = pd.read_csv('/home/shilpa/code/Zuza-b/ChangeDEEPly/raw_data/df_full_withtime.csv',nrows = 5000)
+    df = pd.read_csv('../raw_data/df_full_withtime.csv',nrows = 5000)
 
     return df
 
