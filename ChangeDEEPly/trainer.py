@@ -8,7 +8,7 @@ class Trainer(object):
         pass
 
     def save_model(self,model):
-        filename = "KNN_shilpa_model_0.joblib"
+        filename = "RF_shilpa_model_0.joblib"
         joblib.dump(model, filename)
 
 if __name__ == "__main__":

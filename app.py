@@ -199,7 +199,7 @@ class App():
         #st.dataframe(X)
         ## model.load
         #PATH_TO_LOCAL_MODEL = 'model.joblib'
-        model = joblib.load('KNN_shilpa_model_0.joblib')
+        model = joblib.load('RF_shilpa_model_0.joblib')
 
         ## predict on the model
         # predict only after the user enters all the details
