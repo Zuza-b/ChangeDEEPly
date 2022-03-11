@@ -28,3 +28,4 @@ joblib
 memoized-property
 termcolor
 streamlit
+streamlit_option_menu

@@ -1,7 +1,9 @@
-[theme]
-base="dark"
-primaryColor = "#E694FF"
-backgroundColor = "#00172B"
-secondaryBackgroundColor = "#0083B8"
-textColor = "#DCDCDC"
-font = "sans-serif"
+#```python
+#[theme]
+#base="dark"
+#primaryColor = "#E694FF"
+#backgroundColor = "#0000FF"
+#secondaryBackgroundColor = "#00FF00"
+#textColor = "#DCDCDC"
+#font = "sans-serif"
+#```
